@@ -8,6 +8,7 @@ class SpringAsyncEventLifecycleApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// wait for context loading without exceptions
 	}
 
 }
