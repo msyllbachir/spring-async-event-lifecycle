@@ -1,14 +1,17 @@
-# Read Me First
-The following was discovered as part of building this project:
+# spring-async-event-lifecycle
+Event driven spring async notification application : 
 
-* The original package name 'com.bsyll.dev.spring-async-event-lifecycle' is invalid and this project uses 'com.bsyll.dev.springasynceventlifecycle' instead.
+## Installation
+```bash
+mvn clean install
+```
 
-# Getting Started
+## Run
+```bash
+mvn spring-boot:run
+```
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### sample
+* ![image](https://user-images.githubusercontent.com/16349618/129756287-75971393-5b0d-401c-876a-94d5516d6625.png)
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.3/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.3/maven-plugin/reference/html/#build-image)
 
