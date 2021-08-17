@@ -1,6 +1,7 @@
 package com.bsyll.dev.springasynceventlifecycle.publisher;
 
 import com.bsyll.dev.springasynceventlifecycle.event.GenericEvent;
+import com.bsyll.dev.springasynceventlifecycle.event.MailChannelMessageEvent;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -30,7 +31,7 @@ class AsynchronousEventPublisherTest {
 
     @Test
     void should_successfully_publish_event() {
-        GenericEvent event = new GenericEvent("message", "notification");
+        GenericEvent event = new MailChannelMessageEvent("message", "foo@toto.com");
         publisher.publish(() -> event);
 
         verify(applicationEventPublisher).publishEvent(captor.capture());

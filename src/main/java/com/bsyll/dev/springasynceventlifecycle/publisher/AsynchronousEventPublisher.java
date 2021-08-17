@@ -4,7 +4,6 @@ import com.bsyll.dev.springasynceventlifecycle.event.GenericEvent;
 import com.bsyll.dev.springasynceventlifecycle.metadatas.EventPublisher;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.Lifecycle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.ApplicationEventMulticaster;
@@ -26,7 +25,7 @@ public class AsynchronousEventPublisher {
 
     public void publish(Supplier<? extends GenericEvent> supplier) {
         GenericEvent event = supplier.get();
-        log.debug("publishing event of type {} with uuid {}", event.getType(), event.getUuid());
+        log.debug("publishing event with uuid {}", event.getUuid());
         applicationEventPublisher.publishEvent(event);
     }
 
